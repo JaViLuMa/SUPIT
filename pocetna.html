@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Josip Kelentrić ALGEBRA">
+  <meta property="og:description" content="Ovo je završni projekt Josipa Kelentrića za SUPIT.">
+
+  <link rel="shortcut icon" href="materijali/img/Algebra-logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="print"
+    onload="this.media='all'" />
+  <link rel="stylesheet" href="styles/navbarStyling.css" />
+  <link rel="stylesheet" href="styles/typingStyling.css" />
+  <link rel="stylesheet" href="styles/videoStyling.css" />
+  <title>SUPIT - Projektni zadatak</title>
+</head>
+
+<body>
+  <nav id="myNavbar" class="navbar navbar-light navbar-expand-lg fixed-top">
+    <a class="nav-link active" href="#">
+      <img class="nav-logo" decoding="async" src="materijali/img/Algebra-logo.png" />
+    </a>
+    <button class="ml-auto navbar-toggler" data-toggle="collapse" data-target="#collapse_target"
+      title="Otvorite izbornik">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse justify-content-around navbar-collapse" id="collapse_target">
+      <ul class="nav justify-content-center navbar-nav nav-ul">
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="pocetna.html" hreflang="hr">Početna</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="o-nama.html" hreflang="hr">O nama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="novosti.html" hreflang="hr">Novosti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="nastavni-plan.html" hreflang="hr">Nastavni plan</a>
+        </li>
+        <li class="nav-item">
+          <a id="contactForm" class="nav-link" hreflang="hr" data-target="#myModal" data-toggle="modal">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="video-container">
+    <video src="/materijali/video/typingOnlaptop.mp4" id="typingVideo" autoplay muted loop></video>
+    <div id="videoText">
+      <h1>
+        Budi izvrstan u onom što
+        <span class="typed-text"></span>
+        <span class="cursor">&nbsp;</span>
+      </h1>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" style="margin-top: 10%;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 class="modal-title">Kontaktirajte nas</h3>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputName">Puno ime:</label>
+              <input type="text" class="form-control" id="inputName">
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">E-mail:</label>
+              <input id="inputEmail" type="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="selectImportance">Važnost poruke:</label>
+              <select class="form-control" id="selectImportance">
+                <option>Visoka</option>
+                <option>Niska</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="textArea">Vaša poruka</label>
+              <textarea class="form-control rounded'0" id="textArea" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+              <div class="form-group">
+                <label class="form-check-label" for="gridCheck">
+                  Primaj newsletter:
+                </label>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 10px;">
+              </div>
+            </div>
+            <button type="submit" formaction="http://www.fulek.com/VUA/SUPIT/ContactUs"
+              class="btn btn-primary">Pošalji</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Odustani</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+  <script src="scripts/typingText.js"></script>
+</body>
+
+</html>
