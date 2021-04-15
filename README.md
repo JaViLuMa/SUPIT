@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=UXdfwTSTkc0
+
 # SUPIT Projektni zadatak
 Projektni zadatak za SUPIT, predmet na Algebri. Zaiskri ili neki k
 
