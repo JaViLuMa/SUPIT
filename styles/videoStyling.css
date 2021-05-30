@@ -1,11 +1,15 @@
 #typingVideo {
-  max-width: 100%;
+  width: 1920px;
   height: auto;
+  z-index: 0;
+}
+
+#videoText {
+  padding-top: 100px;
+  z-index: 1;
 }
 
 html,
 body {
-  margin: 0;
-  height: 100%;
   overflow: hidden;
 }
