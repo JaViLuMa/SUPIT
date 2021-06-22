@@ -72,6 +72,16 @@
   flex: 1 0 25%;
 }
 
+.col__kdn {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 2.5px;
+  border: 1px solid lightgrey;
+  flex: 1 0 25%;
+}
+
 .article {
   flex: 1;
 }
@@ -87,11 +97,35 @@
 }
 
 .article p {
-  padding: 5%;
-  padding-top: 0px;
+  padding: 0 5% 5% 5%;
   font-family: "Open Sans Condensed";
   font-size: 1.2rem;
   text-align: justify;
+}
+
+.article__kdn {
+  flex: 1;
+}
+
+.article__kdn h2 {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 2%;
+  margin-right: 5%;
+  font-size: 20px;
+}
+
+.article__kdn p {
+  padding: 0 15% 3% 15%;
+  font-weight: bold;
+  font-family: "Open Sans Condensed";
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.kdn__icons > i {
+  color: steelblue !important;
 }
 
 .col__img {
@@ -121,25 +155,53 @@
 }
 
 .kako-do-nas {
-  width: 100%;
-}
-
-.kako-do-nas__img {
-  height: 821px;
   background-image: url(../materijali/img/kakoDoNas.jpg);
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
   background-blend-mode: lighten;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-attachment: fixed;
+}
+
+.footer__o-nama {
+  background-image: url(../materijali/img/zaiskri-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+}
+
+.footer__o-nama__text {
+  text-align: center;
+}
+
+.footer__o-nama__text p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.kako-do-nas__shrink {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.kako-do-nas__info .columns .col,
+.kako-do-nas__info .columns .col__kdn {
+  background-color: white !important;
 }
 
 .map {
   z-index: 1;
   margin: auto;
-  width: 75rem;
+  width: 75%;
   height: 30rem;
+}
+
+.map__spacer {
+  margin-top: -2.5rem;
 }
 
 @media (max-width: 1240px) {
@@ -149,7 +211,12 @@
     margin: auto;
   }
 
-  .col {
+  .col,
+  .col__kdn {
     margin-bottom: 2rem;
+  }
+
+  .map__spacer {
+    margin-top: -1.5rem;
   }
 }
