@@ -1,0 +1,36 @@
+.novosti3-galerija {
+  background-image: url(../materijali/img/novost3.jpg);
+  margin-top: 5.4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom 100% top 0;
+  height: 400px;
+  z-index: 3;
+}
+
+.novosti3 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.novosti3 h1 {
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid gold;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.paragraf {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.paragraf p {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+  width: 60%;
+  font-size: 20px;
+}
