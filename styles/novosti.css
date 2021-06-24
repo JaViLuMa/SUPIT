@@ -1,0 +1,99 @@
+.novosti {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.novosti h1 {
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid gold;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.bx-sizing {
+  box-sizing: border-box;
+}
+
+.container {
+  margin-top: 2.32rem;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  height: 31.25rem;
+}
+
+.circle {
+  border-style: solid;
+  border-color: rgb(235, 235, 235);
+  border-width: 15px;
+  width: 250px;
+  height: 250px;
+  border-radius: 1000px;
+  margin: 5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+  color: white;
+}
+
+.circle.novosti1 {
+  background-image: url("../materijali/img/novost1.jpg");
+}
+
+.circle.novosti2 {
+  background-image: url("../materijali/img/novost2.jpg");
+}
+
+.circle.novosti3 {
+  background-image: url("../materijali/img/novost3.jpg");
+}
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.aligner p {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    margin-top: 2.55rem;
+    height: 25rem;
+  }
+
+  .circle {
+    margin: 2em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin-top: 2.55rem;
+    height: 45rem;
+  }
+
+  .circle {
+    margin: 2em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    margin-top: 2.55rem;
+    height: 62rem;
+  }
+
+  .circle {
+    margin: 2em;
+  }
+}

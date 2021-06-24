@@ -1,0 +1,88 @@
+.novosti2-galerija {
+  background-image: url(../materijali/img/novost2.jpg);
+  margin-top: 5.4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom 100% top 0;
+  height: 400px;
+  z-index: 3;
+}
+
+.novosti2-galerija__text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-70%);
+  text-align: center;
+}
+
+.novosti2-galerija__text p {
+  font-weight: bold;
+  font-size: 50px;
+  width: 60%;
+  text-align: left;
+  margin-left: 22%;
+  padding-top: 5%;
+}
+
+.novosti2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.novosti2 h1 {
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid gold;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.paragraf {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.paragraf p {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+  width: 60%;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1477px) {
+  .novosti2-galerija__text p {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 1092px) {
+  .novosti2-galerija__text p {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 759px) {
+  .novosti2-galerija__text p {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 733px) {
+  .novosti2-galerija__text p {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .novosti2-galerija__text p {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  .novosti2-galerija__text p {
+    font-size: 20px;
+  }
+}
