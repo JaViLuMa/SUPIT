@@ -6,6 +6,15 @@
   z-index: 3;
 }
 
+.footer__o-nama.nastavni-footer {
+  margin-top: 25.34rem;
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .footer__o-nama__text {
   text-align: center;
 }
@@ -14,4 +23,13 @@
   margin: 0;
   font-weight: bold;
   font-size: 50px;
+}
+
+@media only screen and (max-width: 1450px) {
+  .footer__o-nama.nastavni-footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 15.17rem;
+  }
 }
