@@ -35,9 +35,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+
     <link rel="stylesheet" href="styles/modal.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/novosti.css" />
+    <link rel="stylesheet" href="styles/nastavniPlan.css" />
     <link rel="stylesheet" href="styles/navbarStyling.css" />
     <link rel="stylesheet" href="styles/footerStyling.css" />
 
@@ -78,14 +83,11 @@
             <a class="nav-link nav-link__text" href="o-nama.html" hreflang="hr"
               ><i class="fa fa-comments-o"></i>O nama</a
             >
-            <a
-              class="nav-link nav-link__text active"
-              href="novosti.html"
-              hreflang="hr"
+            <a class="nav-link nav-link__text" href="novosti.html" hreflang="hr"
               ><i class="fa fa-info-circle"></i>Novosti</a
             >
             <a
-              class="nav-link nav-link__text"
+              class="nav-link nav-link__text active"
               href="nastavni-plan.html"
               hreflang="hr"
               ><i class="fa fa-info-circle"></i>Nastavni plan</a
@@ -104,62 +106,57 @@
       </div>
     </nav>
 
-    <div class="novosti">
-      <h1>Novosti</h1>
+    <div class="nastavni-plan">
+      <h1>Nastavni plan</h1>
     </div>
 
-    <div class="bx-sizing">
-      <div class="container">
-        <div class="circle novosti1">
-          <a href="novosti-1.html" style="text-decoration: none">
-            <div class="aligner">
-              <p>
-                <b style="color: gold; text-shadow: 1px 1px black">
-                  28.08.2019.<br /><br />
-                </b>
-                <b style="color: white; text-shadow: 1px 1px black">
-                  Student Josip Stanešić 12. je<br />sistemaš svijeta i
-                  dobitnik<br />
-                  medalje izvrsnosti na natjecanju<br />
-                  WorldSkills Kazan 2019.
-                </b>
-              </p>
+    <div class="nastavni-plan__sadrzaj">
+      <div class="grid">
+        <div class="col">
+          <div class="kolegiji">
+            <h4>
+              <b>Naziv kolegija:</b>
+            </h4>
+
+            <input id="pretraga" placeholder="Upiši Kolegij: " />
+
+            <div class="prikaz">
+              <ul id="lista"></ul>
             </div>
-          </a>
+          </div>
         </div>
-        <div class="circle novosti2">
-          <a href="novosti-2.html" style="text-decoration: none">
-            <div class="aligner">
-              <p>
-                <b style="color: gold; text-shadow: 1px 1px black">
-                  22.07.2019.<br /><br />
-                </b>
-                <b style="color: white; text-shadow: 1px 1px black"
-                  >Nagrađujemo izvrsnost:<br />Objavljujemo dobitnike<br />
-                  stipendijskog natječaja šk. god.<br />2018./2019.!
-                </b>
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="circle novosti3">
-          <a href="novosti-3.html" style="text-decoration: none">
-            <div class="aligner">
-              <p>
-                <b style="color: gold; text-shadow: 1px 1px black">
-                  18.04.2019.<br /><br />
-                </b>
-                <b style="color: white; text-shadow: 1px 1px black">
-                  Digitalno junior ljeto
-                </b>
-              </p>
-            </div>
-          </a>
+
+        <div class="col">
+          <table
+            id="tablica"
+            class="table-striped tablica"
+            style="margin: 0; border-spacing: 0"
+          >
+            <tr id="naslovi">
+              <th>Kolegij</th>
+              <th>ECTS</th>
+              <th>Sati</th>
+              <th>P</th>
+              <th>V</th>
+              <th>Tip</th>
+              <th></th>
+            </tr>
+
+            <tr id="ukupno">
+              <th id="ukupno__tekst">Ukupno</th>
+              <th id="ects"></th>
+              <th id="sati"></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
 
-    <div class="footer__o-nama">
+    <div class="footer__o-nama nastavni-footer">
       <div class="footer__o-nama__text">
         <p style="color: white; text-shadow: 1px 1px black; padding-top: 2rem">
           BUDI IZVRSTAN U ONOM ŠTO VOLIŠ
@@ -257,6 +254,12 @@
 
     <!-- Start SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"
+      integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -267,6 +270,7 @@
       integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/nastavniPlan.js"></script>
     <!-- End SCRIPTS -->
   </body>
 </html>

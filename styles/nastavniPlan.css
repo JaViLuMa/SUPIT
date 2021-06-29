@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+
+* {
+  font-family: "Open Sans Condensed";
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.nastavni-plan {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.nastavni-plan h1 {
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid gold;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.brisi_button {
+  background-color: red;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+#kolegij_redak:nth-child(odd) {
+  background-color: white;
+}
+
+#kolegij_redak:nth-child(even) {
+  background-color: rgb(240, 240, 240);
+}
+
+#ects,
+#sati {
+  color: red;
+  font-weight: 700;
+}
+
+#ukupno {
+  border-top: 2px solid black;
+}
+
+#ukupno > #ukupno__tekst {
+  font-weight: 700;
+}
+
+#naslovi {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgrey;
+}
+
+#naslovi th {
+  font-weight: 700;
+}
+
+#pretraga {
+  height: 2em;
+  width: 100%;
+  padding-left: 2%;
+  border: 2px solid lightgray;
+  border-radius: 5%;
+  margin-top: 1%;
+  margin-bottom: 0;
+  display: grid;
+  color: black;
+  background-color: white;
+}
+
+.tablica {
+  margin: 0;
+}
+
+.tablica td,
+th {
+  border-top: 1px black;
+  border: none;
+  text-align: left;
+  padding: 8px;
+  width: 100%;
+}
+
+#lista:hover {
+  cursor: pointer;
+  color: black;
+  background-color: black;
+}
+
+.tablica tr:nth-child(even) {
+  background-color: white;
+}
+
+.tablica tr:last-child > td:not(:first-child) {
+  color: white;
+}
+
+.tablica tr:last-child {
+  font-weight: bold;
+}
+
+.nastavni-plan__sadrzaj {
+  height: 50%;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 100%);
+  overflow: hidden;
+  margin-top: 4rem;
+  z-index: 1;
+}
+
+.grid {
+  display: flex;
+  margin-bottom: 4rem;
+  margin-left: 200px;
+  margin-right: 200px;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2.5px;
+  flex: 1 0 25%;
+}
+
+.kolegiji {
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: left;
+}
+
+.prikaz {
+  background-color: black;
+  width: 100%;
+  border-radius: 2%;
+  max-height: 15em;
+  height: 100%;
+  display: none;
+}
+
+@media (max-width: 1450px) {
+  .grid {
+    display: block;
+    width: 75%;
+    margin: auto;
+  }
+
+  .col {
+    margin-bottom: 2rem;
+  }
+}
