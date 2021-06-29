@@ -40,6 +40,7 @@
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
     />
 
+    <link rel="stylesheet" href="styles/modal.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/nastavniPlan.css" />
     <link rel="stylesheet" href="styles/navbarStyling.css" />
@@ -131,7 +132,7 @@
             class="table-striped tablica"
             style="margin: 0; border-spacing: 0"
           >
-            <tr>
+            <tr id="naslovi">
               <th>Kolegij</th>
               <th>ECTS</th>
               <th>Sati</th>
@@ -141,8 +142,8 @@
               <th></th>
             </tr>
 
-            <tr>
-              <th>Ukupno</th>
+            <tr id="ukupno">
+              <th id="ukupno__tekst">Ukupno</th>
               <th id="ects"></th>
               <th id="sati"></th>
               <th></th>
@@ -173,10 +174,12 @@
     </div>
 
     <div class="modal fade" id="myModal" style="margin-top: 10%">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title">Kontaktirajte nas</h3>
+            <h3 class="modal-title">
+              <i class="fa fa-envelope" id="envelope"></i>Kontaktirajte nas
+            </h3>
           </div>
 
           <div class="modal-body">
@@ -185,6 +188,7 @@
                 <label for="inputName">Puno ime:</label>
                 <input type="text" class="form-control" id="inputName" />
               </div>
+
               <div class="form-group">
                 <label for="inputEmail">E-mail:</label>
                 <input
@@ -194,6 +198,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <label for="selectImportance">Važnost poruke:</label>
                 <select class="form-control" id="selectImportance">
@@ -201,6 +206,7 @@
                   <option>Niska</option>
                 </select>
               </div>
+
               <div class="form-group">
                 <label for="textArea">Vaša poruka</label>
                 <textarea
@@ -210,16 +216,18 @@
                   required
                 ></textarea>
               </div>
+
               <div class="form-group">
                 <div class="form-group">
                   <label class="form-check-label" for="gridCheck">
                     Primaj newsletter:
                   </label>
+
                   <input
                     class="form-check-input"
                     type="checkbox"
                     id="gridCheck"
-                    style="margin-left: 10px"
+                    style="margin-left: 4px; margin-top: 13px"
                   />
                 </div>
               </div>
@@ -230,6 +238,7 @@
               >
                 Pošalji
               </button>
+
               <button
                 type="button"
                 class="btn btn-danger"

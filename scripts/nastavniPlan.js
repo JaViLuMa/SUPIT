@@ -48,6 +48,9 @@ $(function () {
 
       var tablica = document.getElementById("tablica");
       var redak = tablica.insertRow(Kolegiji_u_tablici.length);
+
+      redak.setAttribute("id", "kolegij_redak");
+
       var celija1 = redak.insertCell(0);
       var celija2 = redak.insertCell(1);
       var celija3 = redak.insertCell(2);
@@ -58,11 +61,10 @@ $(function () {
 
       var btn = document.createElement("button");
 
-      btn.setAttribute("value", "Obrisi");
       btn.setAttribute("id", kolegij.kolegij + "Button");
-      btn.setAttribute("class", "Brisi_button");
+      btn.setAttribute("class", "brisi_button");
 
-      btn.innerHTML = "Obrisi";
+      btn.innerHTML = "Obriši";
 
       celija1.innerHTML = kolegij.kolegij;
       celija2.innerHTML = kolegij.ects;
