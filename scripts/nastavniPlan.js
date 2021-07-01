@@ -20,7 +20,7 @@ console.log(Kolegiji);
 $(function () {
   $("#pretraga").autocomplete({
     source: labela,
-    select: function (event, label) {
+    select: function (e, label) {
       var url = "http://www.fulek.com/VUA/supit/GetKolegij/";
       var vrijednost;
 
@@ -84,8 +84,8 @@ function Zbrojivrijednosti() {
   var Ukupno_ects = document.getElementById("ects");
   var Ukupno_sati = document.getElementById("sati");
 
-  let zbroj_ects = 0;
-  let zbroj_sati = 0;
+  var zbroj_ects = 0;
+  var zbroj_sati = 0;
 
   Kolegiji_u_tablici.forEach((element) => {
     zbroj_ects += element.ects;
