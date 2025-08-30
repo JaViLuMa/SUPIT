@@ -1,0 +1,287 @@
+.campus {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  animation-name: campus-photo;
+  animation-duration: 1s;
+}
+
+.campus__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_us {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about_us__text {
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  max-width: 768px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid gold;
+  animation-name: about_us_text;
+  animation-duration: 1s;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.headers {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 4rem;
+}
+
+.headers--space-below {
+  margin-bottom: 4rem;
+}
+
+.headers__icon {
+  padding-left: 1rem;
+  width: clamp(1.5rem, 0.75rem + 1.5625vw, 2rem);
+  height: clamp(1.75rem, 0.625rem + 2.3438vw, 2.5rem);
+}
+
+.headers__text {
+  vertical-align: middle;
+  color: #a00000;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 0rem + 3.125vw, 2.5rem);
+  padding: 0;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.calligraphy {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  background-color: rgb(230, 230, 230);
+  animation-name: fade-in;
+  animation-duration: 2s;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.calligraphy--text {
+  width: 100%;
+  font-family: "Dancing Script";
+  text-align: justify;
+  font-size: 27px;
+}
+
+@media (min-width: 768px) {
+  .calligraphy--text {
+    padding-left: 0;
+    padding-right: 0;
+    margin: auto;
+    width: 60%;
+  }
+}
+
+.cards,
+.partners {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1280px) {
+  .cards,
+  .partners {
+    flex-direction: row;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  flex: 1 0 25%;
+}
+
+.card__title {
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 20px;
+}
+
+.card__description {
+  padding: 0 5% 5% 5%;
+  font-family: "Open Sans Condensed";
+  font-size: 18px;
+  text-align: justify;
+  margin: 0;
+}
+
+.card__year {
+  color: steelblue;
+}
+
+.partner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 20%;
+}
+
+.partner__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 14px;
+}
+
+.partner__image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reach_us {
+  background-image: url("../assets/images/kakoDoNas.jpg");
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.reach_us__cards {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .reach_us__cards {
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    max-width: 1200px;
+  }
+}
+
+.reach_us__card {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 1.5rem;
+  width: 100%;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .reach_us__card {
+    width: 50%;
+  }
+}
+
+.reach_us__card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.reach_us__card__content__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reach_us__card__content__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.reach_us__card__content__title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.reach_us__card__content__description {
+  margin: 0;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.reach_us__map {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  border: 1px solid lightgrey;
+}
+
+@keyframes campus-photo {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 350px;
+  }
+}
+
+@keyframes about_us_text {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

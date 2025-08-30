@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Lovro Pavlov ALGEBRA" />
+    <meta property="og:description" content="Lovro Pavlog SUPIT." />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+    <link rel="stylesheet" href="./styles/dialog.css" />
+
+    <script src="./scripts/dialog.js" defer></script>
+    <script src="./scripts/navbar.js" defer></script>
+
+    <title>SUPIT - Projektni zadatak</title>
+  </head>
+
+  <body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <div class="video__container">
+      <video
+        src="./assets/videos/laptop-typing.mp4"
+        id="laptop-typing"
+        autoplay
+        muted
+        loop
+        class="video__container__video"
+      ></video>
+
+      <div class="typing_text__container">
+        <div class="typing_text__wrapper">
+          <div class="typing_text_line typing_text_line__first_line">
+            <span id="first_line"></span
+            ><span id="first_caret" class="typing_text__caret"></span>
+          </div>
+
+          <div
+            id="second_line_container"
+            class="typing_text_line typing_text_line__second_line"
+          >
+            <span id="second_line"></span
+            ><span
+              id="second_caret"
+              class="typing_text__caret"
+              style="display: none"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dialog class="dialog" id="contact-form"></dialog>
+
+    <script src="./scripts/typing.js"></script>
+  </body>
+</html>

@@ -16,14 +16,14 @@
 
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="stylesheet" href="./styles/news.css" />
+    <link rel="stylesheet" href="./styles/login-register.css" />
     <link rel="stylesheet" href="./styles/dialog.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
 
     <script src="./scripts/dialog.js" defer></script>
     <script src="./scripts/navbar.js" defer></script>
-    <script src="./scripts/render-news.js" defer></script>
     <script src="./scripts/footer.js" defer></script>
+    <script src="./scripts/login.js" defer></script>
 
     <title>SUPIT - Projektni zadatak</title>
   </head>
@@ -31,11 +31,30 @@
   <body>
     <nav id="navbar" class="navbar"></nav>
 
-    <div class="news">
-      <h1 class="news__text">Novosti</h1>
+    <div class="login-register__container">
+      <h1 class="login-register__title">Prijava korisnika</h1>
+      <form onsubmit="handleLogin(event)" class="login-register__form">
+        <label class="form__label">
+          <p class="form__label--text">Korisnicko ime</p>
+          <input class="form__input" type="text" name="username" required />
+        </label>
+        <label class="form__label">
+          <p class="form__label--text">Lozinka</p>
+          <input class="form__input" type="password" name="password" required />
+        </label>
+        <button class="form__button" type="submit">Prijavi se</button>
+        <div
+          id="form-error"
+          class="form__label--text form__label--text_red"
+        ></div>
+      </form>
+      <p class="form__label--text">
+        Nemate račun?
+        <a class="form__label--text_link" href="registration.html"
+          >Registrirajte se ovdje</a
+        >.
+      </p>
     </div>
-
-    <div class="news__cards" id="news"></div>
 
     <dialog class="dialog" id="contact-form"></dialog>
 
