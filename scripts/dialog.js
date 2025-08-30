@@ -7,18 +7,22 @@ const DIALOG_SNIPPET = `
       />
       <p class="dialog__content__header__text">Kontaktirajte nas</p>
     </div>
-    <form onsubmit="handleSubmitContactForm(event)" class="dialog__contact_form">
+    <form
+      action="https://www.fulek.com/mvc/supit/project-contact-form"
+      method="post"
+      class="dialog__contact_form"
+    >
       <label class="form__label">
         <p class="form__label--text">Puno ime</p>
-        <input class="form__input" type="text" name="full_name" required />
+        <input class="form__input" type="text" name="FullName" required />
       </label>
       <label class="form__label">
         <p class="form__label--text">E-mail</p>
-        <input class="form__input" type="email" name="email" required />
+        <input class="form__input" type="email" name="Email" required />
       </label>
       <label class="form__label">
         <p class="form__label--text">Važnost poruke</p>
-        <select class="form__input" name="priority" required>
+        <select class="form__input" name="Importance" required>
           <option value="low">Niska</option>
           <option value="high">Visoka</option>
         </select>
@@ -27,14 +31,14 @@ const DIALOG_SNIPPET = `
         <p class="form__label--text">Poruka</p>
         <textarea
           class="form__input"
-          name="message"
+          name="Message"
           rows="5"
           required
         ></textarea>
       </label>
       <label class="form__label form__label--row">
         <p class="form__label--text">Želim primati obavijesti</p>
-        <input type="checkbox" name="notifications" />
+        <input type="checkbox" name="ReceiveNewsletter" />
       </label>
       <div class="form__buttons__container">
         <button class="form__button form__button--blue" type="submit">
@@ -70,51 +74,6 @@ function handleContactUsDialogClose() {
   contactUsDialogElement.close();
 
   bodyElement.style.overflow = "auto";
-}
-
-async function sendContactFormData(formValues) {
-  const { fullName, email, priority, message, notifications } = formValues;
-
-  const formResponse = await fetch(
-    "https://www.fulek.com/mvc/supit/project-contact-form",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        FullName: fullName,
-        Email: email,
-        Importance: priority,
-        ReceiveNewsletter: Boolean(notifications),
-        Message: message,
-      }),
-    }
-  );
-
-  const formData = await formResponse.json();
-
-  console.log("formData", formData);
-}
-
-async function handleSubmitContactForm(event) {
-  event.preventDefault();
-
-  const formData = new FormData(event.target);
-
-  const fullName = formData.get("full_name");
-  const email = formData.get("email");
-  const priority = formData.get("priority");
-  const message = formData.get("message");
-  const notifications = formData.get("notifications");
-
-  await sendContactFormData({
-    fullName,
-    email,
-    priority,
-    message,
-    notifications,
-  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
