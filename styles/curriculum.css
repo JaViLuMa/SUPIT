@@ -169,3 +169,12 @@
 .curriculum__table__header--delete {
   opacity: 0;
 }
+
+.delete-button {
+  background-color: #a00000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
